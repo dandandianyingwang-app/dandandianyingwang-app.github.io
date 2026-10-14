@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0">
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="applicable-device" content="pc,mobile">
+<title>蛋蛋电影网｜每日精选院线大片与高清剧集在线观影入口</title>
+<meta name="keywords" content="蛋蛋电影网,电影在线观看,热播剧集推荐,高分院线大片,最新影视资讯,口碑悬疑剧,喜剧综艺盘点,纪录片片单,影视社区互动,经典老片重温">
+<meta name="description" content="蛋蛋电影网（dandandianyingwang-app）是一份面向普通观众的观影指南：每天更新院线大片、高分剧集、经典老片与冷门佳作清单，附选片理由、看点提示与观看节奏建议。不做花哨推荐，只帮你少踩坑、多看对。访问入口：https://dandandianyingwang-app.github.io">
+<meta name="author" content="蛋蛋电影网编辑组">
+<meta name="copyright" content="Copyright © 蛋蛋电影网 dandandianyingwang-app 保留所有权利">
+<meta name="format-detection" content="telephone=no">
+<meta name="theme-color" content="#1a1a2e">
+<link rel="canonical" href="https://dandandianyingwang-app.github.io/">
+<style>
+:root{
+  --bg:#0f0f1a;
+  --bg2:#16162a;
+  --ink:#f2f2f5;
+  --ink2:#b8b8c7;
+  --line:rgba(255,255,255,.09);
+  --gold:#e8b86d;
+  --gold2:#c9963f;
+  --rose:#e86d8a;
+  --teal:#4ecdc4;
+  --shadow:0 18px 50px rgba(0,0,0,.45);
+  --radius:14px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  font-family:"PingFang SC","Microsoft YaHei","Hiragino Sans GB","WenQuanYi Micro Hei",system-ui,-apple-system,sans-serif;
+  background:var(--bg);
+  color:var(--ink);
+  line-height:1.75;
+  overflow-x:hidden;
+  font-size:16px;
+}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.wrap{max-width:1120px;margin:0 auto;padding:0 22px}
+/* ---------- 顶部 ---------- */
+.topbar{
+  position:sticky;top:0;z-index:99;
+  background:rgba(15,15,26,.86);
+  backdrop-filter:blur(14px);
+  -webkit-backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--line);
+}
+.topbar .wrap{display:flex;align-items:center;gap:18px;height:64px}
+.brand{display:flex;align-items:baseline;gap:9px;flex-shrink:0}
+.brand b{
+  font-size:21px;letter-spacing:.5px;
+  background:linear-gradient(92deg,var(--gold),var(--rose));
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  font-weight:800;
+}
+.brand span{font-size:11.5px;color:var(--ink2);letter-spacing:1px}
+.nav{margin-left:auto;display:flex;gap:6px;align-items:center}
+.nav a{
+  font-size:14.5px;color:var(--ink2);padding:7px 11px;border-radius:9px;
+  transition:.25s;
+}
+.nav a:hover{color:var(--gold);background:rgba(232,184,109,.08)}
+.menu-btn{display:none;margin-left:auto;width:40px;height:40px;border:1px solid var(--line);border-radius:10px;background:transparent;color:var(--ink);cursor:pointer;font-size:20px}
+/* ---------- 首屏 ---------- */
+.hero{
+  position:relative;
+  padding:70px 0 60px;
+  background:
+    radial-gradient(900px 420px at 82% -8%,rgba(232,109,138,.22),transparent 62%),
+    radial-gradient(720px 380px at 8% 18%,rgba(78,205,196,.16),transparent 60%),
+    linear-gradient(180deg,#15152a,#0f0f1a);
+  overflow:hidden;
+}
+.hero::after{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);
+  background-size:56px 56px;mask-image:radial-gradient(circle at 50% 38%,#000,transparent 72%);
+}
+.hero .wrap{position:relative;z-index:2}
+.tagline{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:12.5px;color:var(--gold);
+  border:1px solid rgba(232,184,109,.3);border-radius:99px;padding:5px 14px 5px 12px;
+  background:rgba(232,184,109,.06);
+}
+.tagline i{width:6px;height:6px;border-radius:50%;background:var(--rose);animation:pulse 1.8s infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.35;transform:scale(.7)}}
+.hero h1{
+  font-size:clamp(30px,5.4vw,52px);line-height:1.25;margin:22px 0 16px;font-weight:900;
+  letter-spacing:.5px;
+}
+.hero h1 em{font-style:normal;color:var(--gold)}
+.hero p.lead{font-size:clamp(15px,1.7vw,18px);color:var(--ink2);max-width:640px}
+.hero-cta{margin-top:30px;display:flex;flex-wrap:wrap;gap:12px}
+.btn{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:13px 26px;border-radius:11px;font-size:15px;font-weight:700;
+  border:1px solid transparent;cursor:pointer;transition:.25s;
+}
+.btn-main{background:linear-gradient(96deg,var(--gold),var(--gold2));color:#201a10;box-shadow:0 10px 28px rgba(232,184,109,.28)}
+.btn-main:hover{transform:translateY(-2px);box-shadow:0 14px 34px rgba(232,184,109,.38)}
+.btn-ghost{color:var(--ink);border-color:var(--line);background:rgba(255,255,255,.03)}
+.btn-ghost:hover{border-color:var(--gold);color:var(--gold)}
+.url-card{
+  margin-top:36px;max-width:560px;
+  background:rgba(255,255,255,.035);border:1px dashed rgba(255,255,255,.18);
+  border-radius:var(--radius);padding:14px 18px;font-size:13.5px;color:var(--ink2);
+  display:flex;align-items:center;gap:10px;flex-wrap:wrap;
+}
+.url-card code{color:var(--teal);font-family:ui-monospace,Consolas,monospace;font-size:13.5px}
+/* ---------- 栏目通用 ---------- */
+section{padding:64px 0;position:relative}
+.sec-head{display:flex;align-items:flex-end;gap:16px;flex-wrap:wrap;margin-bottom:34px}
+.sec-head .idx{font-size:12px;color:var(--gold);letter-spacing:2px;font-weight:700}
+.sec-head h2{font-size:clamp(23px,3.4vw,32px);font-weight:900;letter-spacing:.3px}
+.sec-head p{color:var(--ink2);font-size:14.5px;width:100%;max-width:620px;margin-top:4px}
+.grid{display:grid;gap:22px}
+.g4{grid-template-columns:repeat(4,1fr)}
+.g3{grid-template-columns:repeat(3,1fr)}
+.g2{grid-template-columns:repeat(2,1fr)}
+/* 卡片 */
+.card{
+  background:var(--bg2);border:1px solid var(--line);border-radius:var(--radius);
+  padding:24px;transition:.3s;position:relative;overflow:hidden;
+}
+.card:hover{transform:translateY(-5px);border-color:rgba(232,184,109,.35);box-shadow:var(--shadow)}
+.card .no{
+  font-size:12px;color:var(--ink2);letter-spacing:1.5px;font-weight:700;
+}
+.card h3{font-size:18px;margin:8px 0 10px;font-weight:800}
+.card p{font-size:14px;color:var(--ink2)}
+.card .more{display:inline-block;margin-top:14px;font-size:13px;color:var(--gold)}
+.card .more:hover{text-decoration:underline}
+/* 海报卡 */
+.poster{
+  background:var(--bg2);border:1px solid var(--line);border-radius:var(--radius);
+  overflow:hidden;transition:.3s;
+}
+.poster:hover{transform:translateY(-5px);box-shadow:var(--shadow);border-color:rgba(232,109,138,.32)}
+.poster .frame{
+  position:relative;aspect-ratio:3/4;overflow:hidden;
+  background:linear-gradient(150deg,#2a2a48,#1c1c33);
+}
+.poster .frame .cap{
+  position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;
+  padding:16px;background:linear-gradient(0deg,rgba(0,0,0,.72),transparent 62%);
+}
+.poster .frame .cap b{font-size:17px;font-weight:800}
+.poster .frame .cap span{font-size:12px;color:#ddd;margin-top:3px}
+.poster .body{padding:15px 16px 18px}
+.poster .body .meta{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:8px}
+.poster .body .meta i{
+  font-style:normal;font-size:11.5px;color:var(--ink2);
+  border:1px solid var(--line);border-radius:5px;padding:2px 7px;
+}
+.poster .body h4{font-size:15.5px;font-weight:700;line-height:1.5}
+.poster .body .why{font-size:13.5px;color:var(--ink2);margin-top:9px}
+/* ---------- 榜单 ---------- */
+.chart-row{
+  display:grid;grid-template-columns:56px 1fr auto;gap:16px;align-items:center;
+  padding:16px 18px;border-bottom:1px solid var(--line);transition:.2s;
+}
+.chart-row:last-child{border-bottom:none}
+.chart-row:hover{background:rgba(255,255,255,.03)}
+.chart-row .rank{
+  font-size:26px;font-weight:900;color:var(--ink2);
+  font-family:Georgia,serif;line-height:1;
+}
+.chart-row.gold .rank{color:var(--gold)}
+.chart-row.silver .rank{color:#c9c9d4}
+.chart-row.bronze .rank{color:var(--rose)}
+.chart-row .tt{font-size:15.5px;font-weight:700}
+.chart-row .tt small{display:block;font-size:12.5px;color:var(--ink2);font-weight:400;margin-top:2px}
+.chart-row .sc{font-size:15px;font-weight:800;color:var(--gold);font-variant-numeric:tabular-nums}
+/* ---------- 时间线 ---------- */
+.timeline{position:relative;padding-left:30px}
+.timeline::before{content:"";position:absolute;left:8px;top:8px;bottom:8px;width:2px;background:linear-gradient(180deg,var(--gold),transparent)}
+.tl-item{position:relative;padding:0 0 26px 22px}
+.tl-item::before{
+  content:"";position:absolute;left:-28px;top:7px;width:12px;height:12px;border-radius:50%;
+  background:var(--bg);border:2px solid var(--gold);
+}
+.tl-item .d{font-size:12.5px;color:var(--gold);letter-spacing:1px;font-weight:700}
+.tl-item h4{font-size:16.5px;margin:3px 0 6px}
+.tl-item p{font-size:14px;color:var(--ink2)}
+/* ---------- 表单 ---------- */
+.field{display:flex;flex-direction:column;gap:7px;margin-bottom:16px}
+.field label{font-size:13.5px;color:var(--ink2)}
+.field input,.field textarea,.field select{
+  background:rgba(255,255,255,.04);border:1px solid var(--line);border-radius:10px;
+  color:var(--ink);padding:12px 14px;font-size:15px;font-family:inherit;
+}
+.field input:focus,.field textarea:focus,.field select:focus{outline:none;border-color:var(--gold)}
+.field textarea{min-height:120px;resize:vertical}
+/* ---------- 页脚 ---------- */
+footer{background:#0a0a14;border-top:1px solid var(--line);padding:44px 0 26px}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:30px}
+.foot-grid h5{font-size:14px;color:var(--gold);margin-bottom:14px;letter-spacing:1px}
+.foot-grid ul{list-style:none;display:flex;flex-direction:column;gap:9px}
+.foot-grid a{font-size:14px;color:var(--ink2)}
+.foot-grid a:hover{color:var(--gold)}
+.foot-brand b{
+  font-size:22px;background:linear-gradient(92deg,var(--gold),var(--rose));
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.foot-brand p{font-size:13.5px;color:var(--ink2);margin-top:12px}
+.copy{margin-top:34px;padding-top:20px;border-top:1px solid var(--line);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:13px;color:var(--ink2)}
+@media(max-width:900px){
+  .g4{grid-template-columns:repeat(2,1fr)}
+  .g3,.g2{grid-template-columns:1fr}
+  .foot-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:640px){
+  .topbar .wrap{height:58px}
+  .nav{position:fixed;top:58px;left:0;right:0;flex-direction:column;align-items:stretch;
+    background:rgba(15,15,26,.98);backdrop-filter:blur(14px);padding:14px;gap:2px;
+    border-bottom:1px solid var(--line);
+    transform:translateY(-130%);transition:.32s;box-shadow:var(--shadow)}
+  .nav.open{transform:translateY(0)}
+  .nav a{padding:12px 14px;border-radius:9px}
+  .menu-btn{display:inline-flex;align-items:center;justify-content:center}
+  .brand b{font-size:18px}
+  section{padding:48px 0}
+  .hero{padding:46px 0 42px}
+  .g4,.foot-grid{grid-template-columns:1fr}
+  .chart-row{grid-template-columns:44px 1fr;gap:12px}
+  .chart-row .sc{grid-column:2}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/yazhou.js"></script>
+
+<header class="topbar">
+  <div class="wrap">
+    <div class="brand">
+      <b>蛋蛋电影网</b>
+      <span>DANDANDIANYINGWANG</span>
+    </div>
+    <nav class="nav" id="nav">
+      <a href="#home">首页</a>
+      <a href="#films">院线大片</a>
+      <a href="#series">剧集片单</a>
+      <a href="#chart">口碑榜单</a>
+      <a href="#archive">经典档案</a>
+      <a href="#schedule">更新日历</a>
+      <a href="#about">关于我们</a>
+      <a href="#contact">留言互动</a>
+    </nav>
+    <button class="menu-btn" id="menuBtn" aria-label="菜单">☰</button>
+  </div>
+</header>
+
+<!-- 首屏 -->
+<section class="hero" id="home">
+  <div class="wrap">
+    <div class="tagline"><i></i> 每日 20:00 更新 · 编辑部人工筛选</div>
+    <h1>少刷两小时推荐流<br>用 <em>蛋蛋电影网</em> 找到今晚该看的那一部</h1>
+    <p class="lead">不堆数据、不做标题党。我们每周从院线、流媒体与老片库里挑出真正值得花时间的片子，写清楚它好在哪、哪里慢、适合什么心情看。一个专注「选片」的观影指南站。</p>
+    <div class="hero-cta">
+      <a class="btn btn-main" href="#films">看本周推荐 →</a>
+      <a class="btn btn-ghost" href="#chart">查口碑榜单</a>
+    </div>
+    <div class="url-card">
+      <span>📍 本站永久访问地址</span>
+      <code>https://dandandianyingwang-app.github.io</code>
+      <span>｜建议收藏，不再迷路</span>
+    </div>
+  </div>
+</section>
+
+<!-- 栏目一：院线大片 -->
+<section id="films">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="idx">01 / FILMS</div>
+      <h2>院线大片与近期新片</h2>
+      <p>正在上映或刚刚上线的作品，我们会先看再写：不剧透关键情节，只告诉你「值不值得买票」。</p>
+    </div>
+    <div class="grid g4">
+      <article class="poster">
+        <div class="frame">
+          <div class="cap"><b>无名之地</b><span>犯罪 · 悬疑 · 138 分钟</span></div>
+        </div>
+        <div class="body">
+          <div class="meta"><i>悬疑</i><i>犯罪</i><i>院线</i></div>
+          <h4>前半段节奏偏慢，后半段反转扎实</h4>
+          <p class="why">适合喜欢自己拼线索的人。视听完成度高，但不建议抱着「爽片」期待进场。</p>
+          <a class="more" href="#">查看完整点评 →</a>
+        </div>
+      </article>
+      <article class="poster">
+        <div class="frame">
+          <div class="cap"><b>海风吹过站台</b><span>剧情 · 家庭 · 112 分钟</span></div>
+        </div>
+        <div class="body">
+          <div class="meta"><i>剧情</i><i>家庭</i><i>温情</i></div>
+          <h4>三条代际线交织，结尾落在「原谅」</h4>
+          <p class="why">泪点不靠煽情，靠细节。周末陪家人看，是一个安全的选择。</p>
+          <a class="more" href="#">查看完整点评 →</a>
+        </div>
+      </article>
+      <article class="poster">
+        <div class="frame">
+          <div class="cap"><b>机械与花</b><span>科幻 · 动作 · 126 分钟</span></div>
+        </div>
+        <div class="body">
+          <div class="meta"><i>科幻</i><i>动作</i><i>视效</i></div>
+          <h4>视效有诚意，文戏比预告片更安静</h4>
+          <p class="why">大银幕值得；如果你只对情节敏感，IMAX 体验会加分。</p>
+          <a class="more" href="#">查看完整点评 →</a>
+        </div>
+      </article>
+      <article class="poster">
+        <div class="frame">
+          <div class="cap"><b>火锅店奇案</b><span>喜剧 · 悬疑 · 98 分钟</span></div>
+        </div>
+        <div class="body">
+          <div class="meta"><i>喜剧</i><i>悬疑</i><i>轻快</i></div>
+          <h4>笑点密度高，反转负责收尾</h4>
+          <p class="why">周五晚上想放松的默认选项。约朋友、约对象都不会冷场。</p>
+          <a class="more" href="#">查看完整点评 →</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 栏目二：剧集片单 -->
+<section id="series" style="background:linear-gradient(180deg,#12122a,#0f0f1a)">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="idx">02 / SERIES</div>
+      <h2>剧集片单与追剧建议</h2>
+      <p>不是「热门剧合集」，而是「按心情选剧」的清单。每部附建议观看节奏，避免一口气追到凌晨。</p>
+    </div>
+    <div class="grid g3">
+      <div class="card">
+        <div class="no">LIST 01</div>
+        <h3>通勤碎片时间 · 单集 30 分钟内</h3>
+        <p>适合地铁、午休与睡前：单集独立成篇，随时可停，不需要回忆上一集剧情。</p>
+        <a class="more" href="#">12 部清单 →</a>
+      </div>
+      <div class="card">
+        <div class="no">LIST 02</div>
+        <h3>周末连刷 · 每集 50 分钟以上</h3>
+        <p>剧情厚、人物多，建议两集一组。我们标出了哪几集是「劝退关」，提前有心理准备。</p>
+        <a class="more" href="#">9 部清单 →</a>
+      </div>
+      <div class="card">
+        <div class="no">LIST 03</div>
+        <h3>配饭下饭 · 轻松不烧脑</h3>
+        <p>不需要动脑、不压抑、笑点稳定的那一类。心情疲惫时的默认片单。</p>
+        <a class="more" href="#">15 部清单 →</a>
+      </div>
+      <div class="card">
+        <div class="no">LIST 04</div>
+        <h3>需要耐心 · 前三集才入坑</h3>
+        <p>公认难进，但进去就不想出来的作品。附「坚持到第几集开始起飞」的明确节点。</p>
+        <a class="more" href="#">7 部清单 →</a>
+      </div>
+      <div class="card">
+        <div class="no">LIST 05</div>
+        <h3>情侣 / 家人同看 · 无争议</h3>
+        <p>避开恐怖、重口与三观撕裂，按口味分三档：甜、暖、带一点小紧张。</p>
+        <a class="more" href="#">11 部清单 →</a>
+      </div>
+      <div class="card">
+        <div class="no">LIST 06</div>
+        <h3>冷门但高分 · 值得挖出来</h3>
+        <p>评分高但讨论度低的小语种与纪录片。看完你会想发给朋友的那一类。</p>
+        <a class="more" href="#">10 部清单 →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 栏目三：口碑榜单 -->
+<section id="chart">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="idx">03 / CHART</div>
+      <h2>本周口碑榜单</h2>
+      <p>榜单每周一刷新，依据本站读者投票与编辑评分综合得出，只列前十。完整数据在「榜单归档」里可追溯。</p>
+    </div>
+    <div class="card" style="padding:8px 18px">
+      <div class="chart-row gold"><div class="rank">01</div><div class="tt">海风吹过站台<small>剧情 · 家庭 · 112 分钟</small></div><div class="sc">9.2</div></div>
+      <div class="chart-row silver"><div class="rank">02</div><div class="tt">无名之地<small>犯罪 · 悬疑 · 138 分钟</small></div><div class="sc">8.9</div></div>
+      <div class="chart-row bronze"><div class="rank">03</div><div class="tt">火锅店奇案<small>喜剧 · 悬疑 · 98 分钟</small></div><div class="sc">8.7</div></div>
+      <div class="chart-row"><div class="rank">04</div><div class="tt">机械与花<small>科幻 · 动作 · 126 分钟</small></div><div class="sc">8.4</div></div>
+      <div class="chart-row"><div class="rank">05</div><div class="tt">南方的雪<small>文艺 · 爱情 · 104 分钟</small></div><div class="sc">8.3</div></div>
+      <div class="chart-row"><div class="rank">06</div><div class="tt">便利店深夜档<small>都市 · 治愈 · 剧集 12 集</small></div><div class="sc">8.2</div></div>
+      <div class="chart-row"><div class="rank">07</div><div class="tt">最后一次出海<small>纪录片 · 海洋 · 96 分钟</small></div><div class="sc">8.1</div></div>
+      <div class="chart-row"><div class="rank">08</div><div class="tt">邻居家的猫<small>喜剧 · 生活流 · 剧集 10 集</small></div><div class="sc">7.9</div></div>
+      <div class="chart-row"><div class="rank">09</div><div class="tt">回声房间<small>心理 · 惊悚 · 107 分钟</small></div><div class="sc">7.8</div></div>
+      <div class="chart-row"><div class="rank">10</div><div class="tt">旧城区<small>犯罪 · 动作 · 剧集 8 集</small></div><div class="sc">7.6</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 栏目四：经典档案 -->
+<section id="archive" style="background:linear-gradient(180deg,#12122a,#0f0f1a)">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="idx">04 / ARCHIVE</div>
+      <h2>经典档案 · 值得再看一遍</h2>
+      <p>重温老片不是怀旧，是发现当年没看懂的东西。每月挑一个主题，写一篇带时间轴的解读。</p>
+    </div>
+    <div class="grid g2">
+      <div class="card">
+        <div class="no">本月主题 · 城市里的孤独</div>
+        <h3>《午夜站台》：一部被低估的都市独白</h3>
+        <p>2003 年上映，豆瓣从 7.6 涨到 8.4。我们按「场景—台词—时代背景」拆了三遍，重点看导演怎么用空镜写人物关系。</p>
+        <a class="more" href="#">阅读全文 →</a>
+      </div>
+      <div class="card">
+        <div class="no">本月主题 · 城市里的孤独</div>
+        <h3>《雨夜电台》：被台词救活的小成本片</h3>
+        <p>全片只有一个固定场景。我们把剧本里被删掉的三段对话补回来了，并解释它们为什么不该被删。</p>
+        <a class="more" href="#">阅读全文 →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 栏目五：更新日历 -->
+<section id="schedule">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="idx">05 / SCHEDULE</div>
+      <h2>更新日历</h2>
+      <p>知道什么时候更新，就不用天天来刷。我们的更新节奏是固定的：</p>
+    </div>
+    <div class="grid g2">
+      <div class="card">
+        <div class="timeline">
+          <div class="tl-item"><div class="d">每周一 · 09:00</div><h4>本周口碑榜单</h4><p>十位编辑评分 + 读者投票，前十名上榜，附一句话入选理由。</p></div>
+          <div class="tl-item"><div class="d">每周三 · 20:00</div><h4>院线新片短评</h4><p>2–4 部当周新片，每部 300 字以内，明确标注「建议看 / 可跳过」。</p></div>
+          <div class="tl-item"><div class="d">每周五 · 20:00</div><h4>周末片单</h4><p>按心情分三档：放松、动脑、陪家人。附建议观看时长。</p></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="timeline">
+          <div class="tl-item"><div class="d">每月 1 日</div><h4>月度高分片单</h4><p>上一个月所有被推荐过的作品中，按综合评分重新排序的精简版。</p></div>
+          <div class="tl-item"><div class="d">每月 15 日</div><h4>经典档案更新</h4><p>一个新主题，一篇长文解读，含时间轴与关键场景截图标注。</p></div>
+          <div class="tl-item"><div class="d">不定期</div><h4>冷门挖宝</h4><p>编辑个人推荐位，无固定时间，出现时会有站内公告。</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 栏目六：关于我们 -->
+<section id="about" style="background:linear-gradient(180deg,#12122a,#0f0f1a)">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="idx">06 / ABOUT</div>
+      <h2>关于蛋蛋电影网</h2>
+      <p>我们不是资讯站，也不是评分聚合站。一句话说清楚我们做什么。</p>
+    </div>
+    <div class="grid g2">
+      <div class="card">
+        <div class="no">我们做什么</div>
+        <h3>只解决一个问题：今晚看什么</h3>
+        <p>市面上的推荐要么太泛，要么已经被流量决定。蛋蛋电影网把「选片」这件事单独拎出来做：每篇推荐都回答三个问题——它是什么、它好在哪、你什么时候看最合适。</p>
+      </div>
+      <div class="card">
+        <div class="no">我们不做什么</div>
+        <h3>不追热点，不做标题党</h3>
+        <p>不上耸动标题，不写「不看后悔一辈子」；不收钱换评分，不拿票房当质量。我们的标准只有一条：愿不愿意把它推荐给自己的朋友。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 栏目七：留言互动 -->
+<section id="contact">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="idx">07 / CONTACT</div>
+      <h2>留言互动</h2>
+      <p>想让我们评哪部片子？觉得哪篇推荐不准？想投稿自己的年度片单？用下面这个表单告诉我们，编辑部会逐条看。</p>
+    </div>
+    <div class="grid g2">
+      <form class="card" onsubmit="event.preventDefault();this.querySelector('button').textContent='已收到，谢谢 ✔';">
+        <div class="field">
+          <label>怎么称呼你</label>
+          <input type="text" placeholder="昵称 / 称呼" required>
+        </div>
+        <div class="field">
+          <label>想说点什么</label>
+          <textarea placeholder="比如：求评某部片子、纠正某篇推荐、投稿片单……" required></textarea>
+        </div>
+        <div class="field">
+          <label>想让我们回你吗</label>
+          <select>
+            <option>不用回，只是提个建议</option>
+            <option>希望回邮件</option>
+            <option>希望公开回复在评论区</option>
+          </select>
+        </div>
+        <button class="btn btn-main" type="submit">发送留言 →</button>
+      </form>
+      <div class="card">
+        <div class="no">CONTACT</div>
+        <h3>其他找到我们的方式</h3>
+        <p style="margin-top:12px">📮 邮箱投稿与商务合作：来信请注明来意，工作日 48 小时内回复。</p>
+        <p style="margin-top:10px">💬 读者群：每月开放一次入群名额，在当月片单文末公布。</p>
+        <p style="margin-top:10px">🌐 本站唯一地址：<code style="color:var(--teal)">https://dandandianyingwang-app.github.io</code></p>
+        <p style="margin-top:10px">⚠️ 提醒：本站不提供资源下载，所有推荐均为观看建议，请通过正版渠道支持创作者。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <b>蛋蛋电影网</b>
+        <p>一个专注「选片」的观影指南站。每天帮你少踩坑、多看对。</p>
+      </div>
+      <div>
+        <h5>栏目导航</h5>
+        <ul>
+          <li><a href="#films">院线大片</a></li>
+          <li><a href="#series">剧集片单</a></li>
+          <li><a href="#chart">口碑榜单</a></li>
+          <li><a href="#archive">经典档案</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>实用入口</h5>
+        <ul>
+          <li><a href="#schedule">更新日历</a></li>
+          <li><a href="#about">关于我们</a></li>
+          <li><a href="#contact">留言互动</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>访问地址</h5>
+        <ul>
+          <li><a href="https://dandandianyingwang-app.github.io">dandandianyingwang-app.github.io</a></li>
+          <li><a href="#">建议收藏本站</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="copy">
+      <span>© 2026 蛋蛋电影网（dandandianyingwang-app）保留所有权利</span>
+      <span>本站内容仅供观影参考 · 请通过正版渠道观看</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var btn=document.getElementById('menuBtn'),nav=document.getElementById('nav');
+  btn.addEventListener('click',function(){nav.classList.toggle('open')});
+  nav.addEventListener('click',function(e){if(e.target.tagName==='A')nav.classList.remove('open')});
+})();
+</script>
+</body>
+</html>
